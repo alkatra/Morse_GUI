@@ -39,18 +39,18 @@ def handleSubmit(self):
 	textbox.setText("")
 
 def output(cipher):
-	for char in cipher:
-		if char == '-':
+	for char_idx in range(0,11): #only outputs 12 characters
+		if cipher[char_idx] == '-':
 			GPIO.output(18, GPIO.HIGH)
 			time.sleep(1)
 			GPIO.output(18, GPIO.LOW)
 			time.sleep(0.5)
-		if char == '.':
+		if cipher[char_idx] == '.':
 			GPIO.output(18, GPIO.HIGH)
 			time.sleep(0.3)
 			GPIO.output(18, GPIO.LOW)
 			time.sleep(0.5)
-		if char == ' ':
+		if cipher[char_idx] == ' ':
 			time.sleep(0.5)		
 
 window()
