@@ -54,4 +54,4 @@ def output(cipher):
 			time.sleep(0.5)		
 
 window()
-	
+GPIO.cleanup()
